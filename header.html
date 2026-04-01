@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Roboto:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<!-- Site Header -->
+<header class="site-header">
+
+  <div class="site-topbar">
+    <span class="site-topbar-name">Walkies With Perks</span>
+    <div class="site-topbar-contact">
+      <a href="tel:07572535127"><i class="fa-solid fa-phone"></i> 07572 535127</a>
+      <a href="mailto:walkieswithperks@gmail.com"><i class="fa-solid fa-envelope"></i> walkieswithperks@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Nav Bar -->
+  <nav class="site-nav">
+    <button class="site-nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="site-nav-list">
+      <li><a href="/home" class="site-nav-link">Home</a></li>
+      <li><a href="/dog-training-hull" class="site-nav-link">Dog Training</a></li>
+      <li><a href="/dog-walking-hull" class="site-nav-link">Dog Walking</a></li>
+      <li><a href="/reviews" class="site-nav-link">Reviews</a></li>
+      <li><a href="/prices" class="site-nav-link">Prices</a></li>
+      <li><a href="/terms-conditions" class="site-nav-link">T&amp;C's</a></li>
+      <li><a href="/gallery" class="site-nav-link">Gallery</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<script>
+  var toggle = document.querySelector('.site-nav-toggle');
+  var navList = document.querySelector('.site-nav-list');
+  toggle.addEventListener('click', function() {
+    var isOpen = navList.classList.toggle('site-nav-open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>
