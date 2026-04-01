@@ -1523,8 +1523,8 @@ margin: 0 0 35px 0;
   position: relative;
   padding: 40px 24px;
   text-align: center;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  margin-left: 0;
   overflow: hidden;
   background: #000;
 }
@@ -1637,9 +1637,21 @@ margin: 0 0 35px 0;
 
 /* Responsive */
 @media (max-width: 768px) {
+  .cta-section {
+    padding: 40px 16px;
+  }
+
   .cta-title {
     font-size: 26px;
+    line-height: 1.35;
   }
+
+  .cta-title-highlight {
+    padding: 6px 10px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
   .cta-text {
     font-size: 18px;
   }
