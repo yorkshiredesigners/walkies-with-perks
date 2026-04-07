@@ -11,7 +11,7 @@
 
 /* Top bar */
 .site-topbar {
-  background-color: #111;
+  background-color: #000;
   border-bottom: 2px solid #fdcf03;
   padding: 14px 32px;
   display: flex;
@@ -19,6 +19,12 @@
   align-items: center;
   gap: 6px;
   text-align: center;
+}
+
+.site-topbar-logo {
+  height: 130px;
+  width: auto;
+  display: block;
 }
 
 .site-topbar-name {
@@ -59,6 +65,9 @@
     padding: 10px 16px;
     gap: 6px;
   }
+  .site-topbar-logo {
+    height: 100px;
+  }
   .site-topbar-name {
     font-size: 20px;
   }
@@ -76,6 +85,9 @@
   .site-topbar {
     padding: 14px 16px;
     gap: 8px;
+  }
+  .site-topbar-logo {
+    height: 85px;
   }
   .site-topbar-name {
     font-size: 22px;
@@ -1420,6 +1432,26 @@ margin: 0 0 35px 0;
     margin-bottom: 70px;
 }
 
+.services-favicon {
+    display: block;
+    margin: 0 auto 32px;
+    height: 300px;
+    width: auto;
+    border-radius: 18%;
+}
+
+@media (max-width: 900px) {
+    .services-favicon {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-favicon {
+        height: 170px;
+    }
+}
+
 .services-title {
     font-family: 'Special Elite', cursive;
     font-size: clamp(36px, 8vw, 72px);
@@ -1514,6 +1546,66 @@ margin: 0 0 35px 0;
 .service-btn:hover {
     transform: translateY(-3px);
     box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+}
+
+/* =====================================================
+   VIDEOS SECTION
+===================================================== */
+.videos-section {
+  background: #fdcf03;
+  padding: 70px 24px;
+  text-align: center;
+}
+
+.videos-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.videos-title {
+  font-family: 'Special Elite', cursive;
+  font-size: clamp(30px, 6vw, 56px);
+  color: #000;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.videos-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.video-wrap {
+  flex: 1;
+  max-width: 340px;
+}
+
+.video-label {
+  font-family: 'Special Elite', cursive;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.video-wrap iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  border: 3px solid #000;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .videos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-wrap {
+    max-width: 320px;
+    width: 100%;
+  }
 }
 
 /* =====================================================
@@ -1855,9 +1947,7 @@ margin: 0 0 35px 0;
 
 .about-image {
   width: 100%;
-  height: 650px;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
 }
 
@@ -1926,7 +2016,7 @@ margin: 0 0 35px 0;
 /* Responsive */
 @media (max-width: 768px) {
   .about-image {
-    height: 350px;
+    height: auto;
   }
   .about-question {
     font-size: 22px;
